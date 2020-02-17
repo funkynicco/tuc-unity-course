@@ -21,4 +21,11 @@ public class GameManager : MonoBehaviour
         enemy.GetComponent<AICharacterControl>().SetTarget(Player.transform);
     }
 
+    public void GameWin()
+    {
+    }
+
+    public void GameOver()
+    {
+    }
 }

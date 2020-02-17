@@ -6,21 +6,21 @@ public class FireControll : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if( other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             ParticleSystem[] particleSystem = GetComponentsInChildren<ParticleSystem>();
 
-            foreach(var ps in particleSystem)
+            foreach (var ps in particleSystem)
             {
-                if(ps.gameObject.tag != "Smoke")
+                if (ps.gameObject.tag != "Smoke")
                 {
                     ps.Stop();
                 }
-                
+
             }
             Light light = GetComponentInChildren<Light>();
             light.enabled = false;
         }
     }
-    
+
 }
