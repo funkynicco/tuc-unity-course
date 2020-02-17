@@ -6,9 +6,11 @@ public class Particle : MonoBehaviour
 {
     private void OnParticleCollision(GameObject other)
     {
-        if(other.gameObject.tag == "Fire")
-        {
-            other.GetComponent<FireControll>().PutOutFire();
-        }
+        //if (other.gameObject.tag == "Fire")
+        //{
+        //    other.GetComponent<FireControll>().DamageFire();
+        //}
     }
+
+
 }

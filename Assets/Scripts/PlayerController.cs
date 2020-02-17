@@ -18,12 +18,25 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Water.Play();
-        } else if (Input.GetMouseButtonUp(0))
+        }
+        else if (Input.GetMouseButtonUp(0))
         {
             Water.Stop();
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            var gameManager = GameObject.Find("GameEngine").GetComponent<GameManager>();
+            foreach (var fire in gameManager.Fires)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    fire.DamageFire();
+                }
+            }
         }
     }
 
