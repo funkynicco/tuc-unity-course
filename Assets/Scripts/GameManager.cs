@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 
 public class GameManager : MonoBehaviour
@@ -16,9 +17,12 @@ public class GameManager : MonoBehaviour
 
     private List<GameObject> _enemies = new List<GameObject>();
 
+    private Text _text;
 
     void Start()
     {
+        // ui stuff...
+
         InvokeRepeating(nameof(SpawnEnemy), 1, 3);
         InvokeRepeating(nameof(SetEnemyTargets), 1, 1);
     }
